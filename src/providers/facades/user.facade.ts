@@ -1,27 +1,5 @@
-export type User = {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: {
-    street: string;
-    suite: string;
-    city: string;
-    zipcode: string;
-    geo: {
-      lat: string;
-      lng: string;
-    };
-    phone: string;
-    website: string;
-    company: {
-      name: string;
-      catchPhrase: string;
-      bs: string;
-    }
-  }
-};
+import { User } from "../../models";
 
 export interface UserFacade {
-  getUser(): Promise<User>;
+  getUser(userId: number): Promise<User>;
 }
